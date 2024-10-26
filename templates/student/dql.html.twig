@@ -1,0 +1,22 @@
+<form method="post" action="/dql" >
+    <lablel> Search </label>
+        <input type="text" name="nom" >
+        <input type="submit" value="Search">
+
+</form>
+
+
+<table border='1'>
+    <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+    </tr>
+    <tr  {% for st in students%}>
+            <td>{{ st.id }}</td>
+            <td>{{ st.Name | upper }}</td>
+            <td>{{ st.age }}</td>
+            <td>{{ st.email }}</td>
+    </tr  {% endfor%}>
+</table>
